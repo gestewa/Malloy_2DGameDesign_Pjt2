@@ -22,5 +22,4 @@ Rectangle::Draw(SDL_Renderer *r)
 {
     SDL_SetRendererDrawColor(r, color.r, color.g, color.b, color.a);
     SDL_RenderFillRect(r, &shape);
-    //   SDL_RenderFillRect( renderer, &r );
 }
