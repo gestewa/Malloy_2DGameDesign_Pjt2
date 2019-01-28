@@ -1,8 +1,8 @@
-Name:
+Name: Gabrielle Stewart
 
-Course:
+Course: CpSc 4160: Data-Driven 2D Video Game Development
 
-Clemson Email Address:
+Clemson Email Address: gestewa@clemson.edu
 
 Project no: 2
 
@@ -13,11 +13,13 @@ Project description:
 
 Your Image:  
   (1) What is it? 
-  (2) What part of the image did you NOT draw?
+      An abstract and cute beaver
 
+  (2) What part of the image did you NOT draw?
+      N/A
 
 The easiest part of this project:
 
 
 Problems that I had in completing this project:
-
+  Setting up SDL, I had forgotten that there was a script in the repo, and was struggling getting the correct dependencies
