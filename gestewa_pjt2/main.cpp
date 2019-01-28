@@ -77,6 +77,22 @@ int main(void)
     Rectangle(Point(365.4, 424), 42.9, 31, color_palette["yellowish"]).Draw(renderer);
     Rectangle(Point(418.3, 424), 42.9, 31, color_palette["yellowish"]).Draw(renderer);
 
+    // Eyes
+    Circle(Point(203.7, 124), 22.1, color_palette["dark_brown"]).Draw(renderer);
+    Circle(Point(578, 124), 22.1, color_palette["dark_brown"]).Draw(renderer);
+
+    // Whiskers Right Side
+    Line(Point(481.5, 340), Point(826, 435), color_palette["black"]).Draw(renderer);
+    Line(Point(481.5, 340), Point(820, 340), color_palette["black"]).Draw(renderer);
+    Line(Point(481.5, 340), Point(783, 502), color_palette["black"]).Draw(renderer);
+    Line(Point(481.5, 340), Point(731, 570), color_palette["black"]).Draw(renderer);
+
+    // Whiskers Left Side
+    Line(Point(340, 340), Point(8, 340), color_palette["black"]).Draw(renderer);
+    Line(Point(340, 340), Point(10, 436), color_palette["black"]).Draw(renderer);
+    Line(Point(340, 340), Point(40, 502), color_palette["black"]).Draw(renderer);
+    Line(Point(340, 340), Point(95, 572), color_palette["black"]).Draw(renderer);
+
     writeName(renderer);
     SDL_RenderPresent(renderer);
     FrameGenerator frameGen(renderer, window, WIDTH, HEIGHT, NAME);
