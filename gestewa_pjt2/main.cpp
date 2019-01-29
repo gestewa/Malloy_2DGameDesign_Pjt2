@@ -67,7 +67,7 @@ int main(void)
     Rectangle(Point(28, 0), 768, 480, color_palette["light_brown_head"]).Draw(renderer);
 
     // Light Nose Part
-    Rectangle(Point(162, 146), 511, 278, color_palette["light_brown_nose"]).Draw(renderer);
+    Rectangle(Point(162,146), 511,278, color_palette["light_brown_nose"]).Draw(renderer);
 
     //Dark Nose Part
     Rectangle(Point(305, 146), 224, 134, color_palette["dark_brown"]).Draw(renderer);
@@ -86,6 +86,11 @@ int main(void)
     Triangle(Point(161, 145), Point(161 + 106, 145), Point(161, 145 + 288), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(568, 146), Point(568 + 106, 146), Point(568 + 106, 146 + 288), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(166, 424), Point(504 + 166, 424), Point(415, 54 + 424), color_palette["dark_brown"]).Draw(renderer);
+    Triangle(Point(159, 151), Point(159+256, 151), Point(159, 151+28), color_palette["light_brown_head"]).Draw(renderer);
+    Triangle(Point(415, 151), Point(415+256, 151), Point(415+256, 151+28), color_palette["light_brown_head"]).Draw(renderer);
+    Triangle(Point(138,140), Point(508,140), Point(138,181), color_palette["light_brown_head"]).Draw(renderer);
+    Triangle(Point(334,141), Point(704,142), Point(704,182), color_palette["light_brown_head"]).Draw(renderer);
+    
 
     // Teeth
     Rectangle(Point(365.4, 424), 42.9, 31, color_palette["yellowish"]).Draw(renderer);
@@ -108,8 +113,13 @@ int main(void)
     Line(Point(340, 340), Point(95, 572), color_palette["black"]).Draw(renderer);
 
     // Ears
-    Triangle(Point(135, 70), Point(45, 177), Point(108, 177), color_palette["light_brown_ears"]).Draw(renderer);
-    Triangle(Point(698, 70), Point(725, 177), Point(789, 177), color_palette["light_brown_ears"]).Draw(renderer);
+    Triangle(Point(136,74), Point(105,180), Point(45,177), color_palette["light_brown_ears"]).Draw(renderer);
+    Triangle(Point(695,75), Point(723,180), Point(787,178), color_palette["light_brown_ears"]).Draw(renderer);
+
+    // Find place
+    SDL_SetRenderDrawColor(renderer,color_palette["black"].r, color_palette["black"].g,color_palette["black"].b,color_palette["black"].a);
+    SDL_RenderDrawPoint(renderer, 140, 68);
+    SDL_RenderDrawPoint(renderer, 690, 68);
 
     writeName(renderer);
     SDL_RenderPresent(renderer);
