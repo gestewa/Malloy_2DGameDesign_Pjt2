@@ -6,8 +6,7 @@
 class Triangle
 {
 public:
-  Triangle(Point v1, Point v2, Point v3, SDL_Color c);
-  Triangle(Point v1, int w, int h, SDL_Color c);
+  Triangle(Point, Point, Point, SDL_Color);
   void Draw(SDL_Renderer *) const;
 
 private:
