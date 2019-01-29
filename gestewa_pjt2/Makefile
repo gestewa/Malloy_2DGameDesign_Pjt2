@@ -12,7 +12,8 @@ OBJS = \
   line.o \
   rectangle.o \
   circle.o \
-  point.o
+  point.o \
+  triangle.o
 
 EXEC = run
 

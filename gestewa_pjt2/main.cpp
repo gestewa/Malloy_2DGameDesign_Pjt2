@@ -63,23 +63,37 @@ int main(void)
 
     // TODO, call proper functions
     // Overall Head Shape
-    Rectangle(Point(30, 0), 770, 720, color_palette["dark_brown"]).Draw(renderer);
-    Rectangle(Point(30, 0), 770, 480, color_palette["light_brown_head"]).Draw(renderer);
+    Rectangle(Point(28, 0), 768, 720, color_palette["dark_brown"]).Draw(renderer);
+    Rectangle(Point(28, 0), 768, 480, color_palette["light_brown_head"]).Draw(renderer);
 
     // Light Nose Part
-    Rectangle(Point(160.5, 165), 504, 259, color_palette["light_brown_nose"]).Draw(renderer);
+    Rectangle(Point(162, 146), 511, 278, color_palette["light_brown_nose"]).Draw(renderer);
 
     //Dark Nose Part
-    Rectangle(Point(301.5, 158.5), 223, 118, color_palette["dark_brown"]).Draw(renderer);
-    Rectangle(Point(408.3, 317.5), 10, 138, color_palette["dark_brown"]).Draw(renderer);
+    Rectangle(Point(305, 146), 224, 134, color_palette["dark_brown"]).Draw(renderer);
+    Rectangle(Point(408.3, 146), 10, 309, color_palette["dark_brown"]).Draw(renderer);
+
+    // Head Shape
+    Triangle(Point(415, 0), Point(830, 0), Point(830, 100), color_palette["white"]).Draw(renderer);
+    Triangle(Point(415, 0), Point(0, 0), Point(0, 100), color_palette["white"]).Draw(renderer);
+    Triangle(Point(156, 0), Point(0, 0), Point(0, 595), color_palette["white"]).Draw(renderer);
+    Triangle(Point(674, 0), Point(830, 0), Point(830, 595), color_palette["white"]).Draw(renderer);
+
+    // Face Shape
+    Triangle(Point(28, 480), Point(796, 480), Point(415, 570), color_palette["light_brown_head"]).Draw(renderer);
+
+    // Nose Shape
+    Triangle(Point(161, 145), Point(161 + 106, 145), Point(161, 145 + 288), color_palette["light_brown_head"]).Draw(renderer);
+    Triangle(Point(568, 146), Point(568 + 106, 146), Point(568 + 106, 146 + 288), color_palette["light_brown_head"]).Draw(renderer);
+    Triangle(Point(166, 424), Point(504 + 166, 424), Point(415, 54 + 424), color_palette["dark_brown"]).Draw(renderer);
 
     // Teeth
     Rectangle(Point(365.4, 424), 42.9, 31, color_palette["yellowish"]).Draw(renderer);
     Rectangle(Point(418.3, 424), 42.9, 31, color_palette["yellowish"]).Draw(renderer);
 
     // Eyes
-    Circle(Point(203.7, 124), 22.1, color_palette["dark_brown"]).Draw(renderer);
-    Circle(Point(578, 124), 22.1, color_palette["dark_brown"]).Draw(renderer);
+    Circle(Point(230, 146), 24, color_palette["dark_brown"]).Draw(renderer);
+    Circle(Point(607, 146), 24, color_palette["dark_brown"]).Draw(renderer);
 
     // Whiskers Right Side
     Line(Point(481.5, 340), Point(826, 435), color_palette["black"]).Draw(renderer);
@@ -92,6 +106,10 @@ int main(void)
     Line(Point(340, 340), Point(10, 436), color_palette["black"]).Draw(renderer);
     Line(Point(340, 340), Point(40, 502), color_palette["black"]).Draw(renderer);
     Line(Point(340, 340), Point(95, 572), color_palette["black"]).Draw(renderer);
+
+    // Ears
+    Triangle(Point(135, 70), Point(45, 177), Point(108, 177), color_palette["light_brown_ears"]).Draw(renderer);
+    Triangle(Point(698, 70), Point(725, 177), Point(789, 177), color_palette["light_brown_ears"]).Draw(renderer);
 
     writeName(renderer);
     SDL_RenderPresent(renderer);
