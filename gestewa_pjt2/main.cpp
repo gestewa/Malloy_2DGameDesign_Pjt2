@@ -31,7 +31,7 @@ void writeName(SDL_Renderer *renderer)
   int textWidth = surface->w;
   int textHeight = surface->h;
   SDL_FreeSurface(surface);
-  SDL_Rect dst = {20, HEIGHT - 40, textWidth, textHeight};
+  SDL_Rect dst = {40, HEIGHT - 40, textWidth, textHeight};
 
   SDL_RenderCopy(renderer, texture, NULL, &dst);
   SDL_DestroyTexture(texture);
@@ -85,6 +85,7 @@ int main(void)
     Triangle(Point(161, 145), Point(161 + 106, 145), Point(161, 145 + 288), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(568, 146), Point(568 + 106, 146), Point(568 + 106, 146 + 288), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(166, 424), Point(504 + 166, 424), Point(415, 54 + 424), color_palette["dark_brown"]).Draw(renderer);
+    Triangle(Point(306, 280), Point(526, 280), Point(415, 324), color_palette["dark_brown"]).Draw(renderer);
     Triangle(Point(159, 151), Point(159 + 256, 151), Point(159, 151 + 28), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(415, 151), Point(415 + 256, 151), Point(415 + 256, 151 + 28), color_palette["light_brown_head"]).Draw(renderer);
     Triangle(Point(138, 140), Point(508, 140), Point(138, 181), color_palette["light_brown_head"]).Draw(renderer);
