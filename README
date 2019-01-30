@@ -8,18 +8,21 @@ Project no: 2
 
 Project due date: Friday, February 8th, 2019
 
-Project description: 
+Project description: Leveringing C++ classes to draw simple shapes using SDL
 
 
 Your Image:  
   (1) What is it? 
-      An abstract and cute beaver
+      An abstract and unbiasedly cute beaver
 
   (2) What part of the image did you NOT draw?
       N/A
 
 The easiest part of this project:
-
+  Choosing the classess
+  Writing the classes
 
 Problems that I had in completing this project:
-  Setting up SDL, I had forgotten that there was a script in the repo, and was struggling getting the correct dependencies
+  Setting up SDL, I had forgotten that there was a script in the repo, and was struggling getting the correct dependencies.
+  Deciding on what to draw
+  
