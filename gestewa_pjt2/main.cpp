@@ -58,7 +58,7 @@ int main(void)
     SDL_Renderer *renderer = SDL_CreateRenderer(
         window, -1, SDL_RENDERER_SOFTWARE);
 
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(renderer, color_palette["white"].r, color_palette["white"].g, color_palette["white"].b, 255);
     SDL_RenderClear(renderer);
 
     // Overall Head Shape

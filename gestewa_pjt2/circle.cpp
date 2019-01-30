@@ -1,11 +1,6 @@
 #include "circle.h"
 
-Circle::Circle(Point s, int r, SDL_Color c)
-{
-    center = s;
-    radius = r;
-    color = c;
-}
+Circle::Circle(Point s, int r, SDL_Color c) : center(s), radius(r), color(c) {}
 
 void Circle::Draw(SDL_Renderer *r) const
 {

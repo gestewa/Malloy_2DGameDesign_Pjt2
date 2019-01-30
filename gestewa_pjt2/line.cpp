@@ -1,11 +1,6 @@
 #include "line.h"
 
-Line::Line(Point s, Point f, SDL_Color c)
-{
-    start = s;
-    end = f;
-    color = c;
-}
+Line::Line(Point s, Point f, SDL_Color c) : start(s), end(f), color(c) {}
 
 void Line::Draw(SDL_Renderer *r) const
 {

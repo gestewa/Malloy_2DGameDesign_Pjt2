@@ -1,16 +1,8 @@
 #include "point.h"
 
-Point::Point()
-{
-    point.x = 0;
-    point.y = 0;
-}
+Point::Point() : point{0, 0} {}
 
-Point::Point(int x, int y)
-{
-    point.x = x;
-    point.y = y;
-}
+Point::Point(int x, int y) : point{x, y} {}
 
 int Point::getX() const
 {

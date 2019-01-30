@@ -10,4 +10,5 @@ std::unordered_map<std::string, SDL_Color> color_palette = {
     {"black", {30, 30, 30, 255}},
     {"light_brown_nose", {198, 146, 81, 255}},
     {"light_brown_head", {148, 99, 45, 255}},
-    {"white", {255, 255, 255, 255}}};
+    // {"white", {255, 255, 255, 255}}};
+    {"white", {247, 231, 180, 255}}};
