@@ -13,27 +13,18 @@ bool sortbyfir(const std::pair<int, Point> &a,
     return (a.first <= b.first);
 }
 
-Triangle::Triangle(Point p1, Point p2, Point p3, SDL_Color c)
-{
-    // Sort the incoming points according to y-coordinate
+std::vector<std::pair<int, Point>> getV(Point p1, Point p2, Point p3)
+{ // Sort the incoming points according to y-coordinate
     std::vector<std::pair<int, Point>> v;
     v.push_back(std::make_pair(p1.getY(), p1));
     v.push_back(std::make_pair(p2.getY(), p2));
     v.push_back(std::make_pair(p3.getY(), p3));
 
     std::sort(v.begin(), v.end(), sortbyfir);
-
-    std::vector<std::pair<int, Point>>::reverse_iterator it = v.rbegin();
-
-    v1 = it->second;
-    ++it;
-    v2 = it->second;
-    ++it;
-    v3 = it->second;
-    ++it;
-
-    color = c;
+    return v;
 }
+
+Triangle::Triangle(Point p1, Point p2, Point p3, SDL_Color c) : v1(getV(p1, p2, p3)[2].second), v2(getV(p1, p2, p3)[1].second), v3(getV(p1, p2, p3)[0].second), color(c) {}
 
 // cross product x1 y1 x2 y2 = x1*y2-x2*y1
 int crossProduct(int x1, int y1, int x2, int y2)
