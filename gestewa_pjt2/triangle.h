@@ -8,6 +8,8 @@ class Triangle
 public:
   Triangle(Point, Point, Point, SDL_Color);
   void Draw(SDL_Renderer *) const;
+  Triangle(const Triangle &) = delete;
+  Triangle &operator=(const Triangle &) = delete;
 
 private:
   Point v1;

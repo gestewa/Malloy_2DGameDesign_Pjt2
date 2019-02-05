@@ -35,6 +35,7 @@ void writeName(SDL_Renderer *renderer)
 
   SDL_RenderCopy(renderer, texture, NULL, &dst);
   SDL_DestroyTexture(texture);
+  TTF_CloseFont(font);
 }
 
 int main(void)
@@ -43,7 +44,7 @@ int main(void)
   {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {
-      std::cout << "Failed to initialize SDL2" << std::endl;
+      std::cout << "Failed to initialize SDL2" << SDL_GetError() << std::endl;
       return EXIT_FAILURE;
     }
     SDL_Window *window = SDL_CreateWindow(
@@ -53,8 +54,6 @@ int main(void)
         WIDTH,
         HEIGHT,
         SDL_WINDOW_SHOWN);
-    // Apparently we can't use hardware acceleration with
-    // SDL_GetWindowSurface
     SDL_Renderer *renderer = SDL_CreateRenderer(
         window, -1, SDL_RENDERER_SOFTWARE);
 
@@ -153,6 +152,7 @@ int main(void)
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+    TTF_Quit();
     SDL_Quit();
   }
   catch (const std::string &msg)
