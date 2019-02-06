@@ -8,8 +8,6 @@ class Line
 public:
   Line(Point, Point, SDL_Color);
   void Draw(SDL_Renderer *) const;
-  Line(const Line &) = delete;
-  Line &operator=(const Line &) = delete;
 
 private:
   Point start;

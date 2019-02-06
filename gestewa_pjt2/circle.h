@@ -8,8 +8,6 @@ class Circle
 public:
   Circle(Point s, int r, SDL_Color c);
   void Draw(SDL_Renderer *) const;
-  Circle(const Circle &) = delete;
-  Circle &operator=(const Circle &) = delete;
 
 private:
   Point center;
