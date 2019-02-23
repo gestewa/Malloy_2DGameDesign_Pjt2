@@ -1,4 +1,5 @@
 #include "circle.h"
+#include <iostream>
 
 Circle::Circle(Point s, int r, SDL_Color c) : center(s), radius(r), color(c) {}
 
@@ -18,4 +19,14 @@ void Circle::Draw(SDL_Renderer *r) const
             }
         }
     }
+}
+
+int Circle::getRadius() const
+{
+    return radius;
+}
+
+std::ostream &operator<<(std::ostream &out, const Circle &c)
+{
+    return out << "I am a circle, and with high probability, one of low resolution, because my radius is " << c.getRadius();
 }
